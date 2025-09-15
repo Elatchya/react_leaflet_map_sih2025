@@ -1,0 +1,47 @@
+[
+  {
+    "id": "J101",
+    "name": "Kodambakkam Signal",
+    "lat": 13.0505,
+    "lng": 80.2219,
+    "congestion": "High",
+    "vehicle_count" : 32,
+    "iot" : [
+      {
+        "iot_id": "I1",
+        "current_signal" : "Red",
+        "current_signal_timer" : "30"
+      }
+    ]
+  },
+  {
+    "id": "J102",
+    "name": "Nungambakkam Signal",
+    "lat": 13.0611,
+    "lng": 80.2436,
+    "congestion": "Medium",
+    "vehicle_count" : 43,
+    "iot" : [
+      {
+        "iot_id": "I1",
+        "current_signal" : "Red",
+        "current_signal_timer" : "30"
+      }
+    ]
+  },
+  {
+    "id": "J103",
+    "name": "Guindy Signal",
+    "lat": 13.0108,
+    "lng": 80.2124,
+    "congestion": "Low",
+    "vehicle_count" : 60,
+    "iot" : [
+      {
+        "iot_id": "I1",
+        "current_signal" : "Red",
+        "current_signal_timer" : "30"
+      }
+    ]
+  }
+]
