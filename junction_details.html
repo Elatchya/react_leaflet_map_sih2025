@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta charset="utf-8"/>
+<title>Traffic Management System</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B600%3B700&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #1173d4;
+      --secondary-color: #1e293b;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --background-color: #0f172a;
+    }
+    .signal-green {
+      color: #22c55e;
+      background-color: rgba(34, 197, 94, 0.1);
+    }
+    .signal-red {
+      color: #ef4444;
+      background-color: rgba(239, 68, 68, 0.1);
+    }
+    .signal-orange {
+      color: #f97316;
+      background-color: rgba(249, 115, 22, 0.1);
+    }
+    .group:focus-within .manual-override-controls {
+      display: flex;
+    }
+  </style>
+</head>
+<body class="bg-[var(--background-color)]" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="flex min-h-screen">
+<main class="flex-1">
+<header class="flex items-center justify-between h-16 px-8 border-b border-slate-800">
+<div class="flex items-center gap-3">
+<img 
+        src="/icons/odisha1.png"
+        alt="Odisha Logo"
+        style=" height: 40px; margin-right: 15px" 
+/>
+<h1 class="text-white text-xl font-bold">Government of Odisha</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative text-[var(--text-secondary)] hover:text-white">
+</button>
+
+</header>
+<div class="p-8">
+<div class="max-w-full mx-auto">
+<div class="mb-8">
+<h2 class="text-3xl font-bold text-[var(--text-primary)]">Junction JID-101</h2>
+</div>
+<div class="bg-[var(--secondary-color)] rounded-lg shadow-lg border border-slate-800 mb-8">
+<div class="px-6 py-4 border-b border-slate-800">
+<h3 class="text-lg font-semibold text-[var(--text-primary)]">Junction Information</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px">
+<div class="p-6">
+<p class="text-sm font-medium text-[var(--text-secondary)]">Congestion Level</p>
+<p class="text-lg font-semibold text-[var(--text-primary)] mt-1">Moderate</p>
+</div>
+<div class="p-6">
+<p class="text-sm font-medium text-[var(--text-secondary)]">Vehicle Count</p>
+<p class="text-lg font-semibold text-[var(--text-primary)] mt-1">345</p>
+</div>
+<div class="p-6">
+<p class="text-sm font-medium text-[var(--text-secondary)]">Latitude</p>
+<p class="text-lg font-semibold text-[var(--text-primary)] mt-1">34.0522° N</p>
+</div>
+<div class="p-6">
+<p class="text-sm font-medium text-[var(--text-secondary)]">Longitude</p>
+<p class="text-lg font-semibold text-[var(--text-primary)] mt-1">118.2437° W</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-[var(--text-primary)] mb-4">Associated IoT Devices</h3>
+<div class="overflow-x-auto bg-[var(--secondary-color)] rounded-lg border border-slate-800">
+<table class="min-w-full divide-y divide-slate-800">
+<thead class="bg-slate-900/50">
+<tr>
+<th class="px-6 py-3 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider" scope="col">Device ID</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider" scope="col">Current Signal</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider" scope="col">Signal Timer</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-800">
+<tr class="group">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">DID-1234</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium signal-green">
+<span class="w-2 h-2 mr-1.5 bg-current rounded-full"></span>
+                        Green
+                      </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">30 seconds</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium relative">
+<button class="font-semibold text-[var(--primary-color)] hover:text-blue-400">Manual Override</button>
+<div class="manual-override-controls hidden absolute left-0 top-full mt-2 z-10 flex-col gap-2 p-2 rounded-md bg-slate-900 border border-slate-700 shadow-lg">
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-md bg-red-500 hover:bg-red-600"></button>
+<button class="w-8 h-8 rounded-md bg-green-500 hover:bg-green-600"></button>
+<button class="w-8 h-8 rounded-md bg-orange-500 hover:bg-orange-600"></button>
+</div>
+<select class="w-full bg-slate-800 text-white text-sm rounded-md border-slate-700 focus:ring-blue-500 focus:border-blue-500">
+<option>15s</option>
+<option>30s</option>
+<option>45s</option>
+<option>60s</option>
+</select>
+</div>
+</td>
+</tr>
+<tr class="group">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">IOT_ID-1</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium signal-red">
+<span class="w-2 h-2 mr-1.5 bg-current rounded-full"></span>
+                        Red
+                      </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">45 seconds</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium relative">
+<button class="font-semibold text-[var(--primary-color)] hover:text-blue-400">Manual Override</button>
+<div class="manual-override-controls hidden absolute left-0 top-full mt-2 z-10 flex-col gap-2 p-2 rounded-md bg-slate-900 border border-slate-700 shadow-lg">
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-md bg-red-500 hover:bg-red-600"></button>
+<button class="w-8 h-8 rounded-md bg-green-500 hover:bg-green-600"></button>
+<button class="w-8 h-8 rounded-md bg-orange-500 hover:bg-orange-600"></button>
+</div>
+<select class="w-full bg-slate-800 text-white text-sm rounded-md border-slate-700 focus:ring-blue-500 focus:border-blue-500">
+<option>15s</option>
+<option>30s</option>
+<option selected="">45s</option>
+<option>60s</option>
+</select>
+</div>
+</td>
+</tr>
+<tr class="group">
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--text-primary)]">IOT_ID-2</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium signal-orange">
+<span class="w-2 h-2 mr-1.5 bg-current rounded-full"></span>
+                        Orange
+                      </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-[var(--text-secondary)]">15 seconds</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium relative">
+<button class="font-semibold text-[var(--primary-color)] hover:text-blue-400">Manual Override</button>
+<div class="manual-override-controls hidden absolute left-0 top-full mt-2 z-10 flex-col gap-2 p-2 rounded-md bg-slate-900 border border-slate-700 shadow-lg">
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-md bg-red-500 hover:bg-red-600"></button>
+<button class="w-8 h-8 rounded-md bg-green-500 hover:bg-green-600"></button>
+<button class="w-8 h-8 rounded-md bg-orange-500 hover:bg-orange-600"></button>
+</div>
+<select class="w-full bg-slate-800 text-white text-sm rounded-md border-slate-700 focus:ring-blue-500 focus:border-blue-500">
+<option selected="">15s</option>
+<option>30s</option>
+<option>45s</option>
+<option>60s</option>
+</select>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-8 right-8">
+<button class="bg-[var(--primary-color)] text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-blue-600">
+<span class="material-symbols-outlined">arrow_back</span>
+          Back to Map
+        </button>
+</div>
+</main>
+</div>
+
+</body></html>

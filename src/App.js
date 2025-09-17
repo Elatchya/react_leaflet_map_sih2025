@@ -2,6 +2,7 @@ import "./styles.css";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Tooltip } from "react-leaflet";
 import { Icon } from "leaflet";
+
 import {
   BrowserRouter as Router,
   Routes,
