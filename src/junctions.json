@@ -5,12 +5,12 @@
     "lat": 13.0505,
     "lng": 80.2219,
     "congestion": "High",
-    "vehicle_count" : 32,
-    "iot" : [
+    "vehicle_count": 32,
+    "iot": [
       {
         "iot_id": "I1",
-        "current_signal" : "Red",
-        "current_signal_timer" : "30"
+        "current_signal": "Red",
+        "current_signal_timer": "30"
       }
     ]
   },
@@ -20,12 +20,12 @@
     "lat": 13.0611,
     "lng": 80.2436,
     "congestion": "Medium",
-    "vehicle_count" : 43,
-    "iot" : [
+    "vehicle_count": 43,
+    "iot": [
       {
-        "iot_id": "I1",
-        "current_signal" : "Red",
-        "current_signal_timer" : "30"
+        "iot_id": "I2",
+        "current_signal": "Red",
+        "current_signal_timer": "25"
       }
     ]
   },
@@ -35,12 +35,147 @@
     "lat": 13.0108,
     "lng": 80.2124,
     "congestion": "Low",
-    "vehicle_count" : 60,
-    "iot" : [
+    "vehicle_count": 60,
+    "iot": [
       {
-        "iot_id": "I1",
-        "current_signal" : "Red",
-        "current_signal_timer" : "30"
+        "iot_id": "I3",
+        "current_signal": "Green",
+        "current_signal_timer": "40"
+      }
+    ]
+  },
+  {
+    "id": "J104",
+    "name": "T Nagar Signal",
+    "lat": 13.0418,
+    "lng": 80.2334,
+    "congestion": "High",
+    "vehicle_count": 78,
+    "iot": [
+      {
+        "iot_id": "I4",
+        "current_signal": "Red",
+        "current_signal_timer": "35"
+      }
+    ]
+  },
+  {
+    "id": "J105",
+    "name": "Saidapet Signal",
+    "lat": 13.0214,
+    "lng": 80.2306,
+    "congestion": "Medium",
+    "vehicle_count": 55,
+    "iot": [
+      {
+        "iot_id": "I5",
+        "current_signal": "Yellow",
+        "current_signal_timer": "10"
+      }
+    ]
+  },
+  {
+    "id": "J106",
+    "name": "Adyar Signal",
+    "lat": 13.0067,
+    "lng": 80.2573,
+    "congestion": "Low",
+    "vehicle_count": 38,
+    "iot": [
+      {
+        "iot_id": "I6",
+        "current_signal": "Green",
+        "current_signal_timer": "25"
+      }
+    ]
+  },
+  {
+    "id": "J107",
+    "name": "Anna Nagar Signal",
+    "lat": 13.0878,
+    "lng": 80.2132,
+    "congestion": "High",
+    "vehicle_count": 92,
+    "iot": [
+      {
+        "iot_id": "I7",
+        "current_signal": "Red",
+        "current_signal_timer": "45"
+      }
+    ]
+  },
+  {
+    "id": "J108",
+    "name": "Mount Road Signal",
+    "lat": 13.0646,
+    "lng": 80.2701,
+    "congestion": "Medium",
+    "vehicle_count": 67,
+    "iot": [
+      {
+        "iot_id": "I8",
+        "current_signal": "Green",
+        "current_signal_timer": "20"
+      }
+    ]
+  },
+  {
+    "id": "J109",
+    "name": "Egmore Signal",
+    "lat": 13.0724,
+    "lng": 80.2601,
+    "congestion": "High",
+    "vehicle_count": 84,
+    "iot": [
+      {
+        "iot_id": "I9",
+        "current_signal": "Yellow",
+        "current_signal_timer": "15"
+      }
+    ]
+  },
+  {
+    "id": "J110",
+    "name": "Mylapore Signal",
+    "lat": 13.0313,
+    "lng": 80.2707,
+    "congestion": "Low",
+    "vehicle_count": 42,
+    "iot": [
+      {
+        "iot_id": "I10",
+        "current_signal": "Green",
+        "current_signal_timer": "30"
+      }
+    ]
+  },
+  {
+    "id": "J111",
+    "name": "Velachery Signal",
+    "lat": 12.9801,
+    "lng": 80.2205,
+    "congestion": "Medium",
+    "vehicle_count": 58,
+    "iot": [
+      {
+        "iot_id": "I11",
+        "current_signal": "Red",
+        "current_signal_timer": "40"
+      }
+    ]
+  },
+  {
+    "id": "J112",
+    "name": "Perambur Signal",
+    "lat": 13.1212,
+    "lng": 80.2378,
+    "congestion": "High",
+    "vehicle_count": 71,
+    "iot": [
+      {
+        "iot_id": "I12",
+        "current_signal": "Red",
+        "current_signal_timer": "35"
       }
     ]
   }
