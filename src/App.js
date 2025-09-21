@@ -11,7 +11,6 @@ import {
   useParams
 } from "react-router-dom";
 import junctions from "./junctions.json";
-import odishaLogo from "./icons/odisha.png";
 
 function Header() {
   return (
