@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta charset="utf-8"/>
+<title>Traffic Management System</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Poppins:wght@400;500;600;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #166534;
+      --secondary-color: #f0fdf4;
+      --text-primary: #14532d;
+      --text-secondary: #4d7c0f;
+      --background-color: #f0fdf4;
+      --gov-green: #11cd56;
+      --gov-red: #f62424;
+      --gov-amber: #f97316;
+    }
+    .signal-green {
+      color: var(--gov-green);
+      background-color: rgba(34, 197, 94, 0.1);
+    }
+    .signal-red {
+      color: var(--gov-red);
+      background-color: rgba(239, 68, 68, 0.1);
+    }
+    .signal-orange {
+      color: var(--gov-amber);
+      background-color: rgba(249, 115, 22, 0.1);
+    }
+    .group .manual-override-controls {
+        display: none;
+    }
+    .group.manual-mode .manual-override-controls {
+      display: flex;
+    }
+    .group.manual-mode .manual-override-button {
+      display: none;
+    }
+    @keyframes bounce-sm {
+      0%, 100% { transform: translateY(-5%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+      50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+    }
+    .animate-bounce-sm {
+      animation: bounce-sm 1s infinite;
+    }
+  </style>
+</head>
+<body class="bg-[var(--background-color)]" style='font-family: "Poppins", sans-serif;'>
+<div class="flex min-h-screen">
+<main class="flex-1">
+<header class="flex items-center justify-between h-20 px-8 bg-white shadow-md">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-[var(--gov-green)]">traffic</span>
+<h1 class="text-3xl font-black tracking-tighter text-[var(--text-primary)]">Government of Odisha</h1>
+</div>
+<div class="flex items-center gap-6">
+
+</header>
+<div class="p-8">
+<div class="max-w-full mx-auto">
+<div class="mb-10 text-center">
+<h2 class="text-3xl font-bold text-[var(--text-primary)] tracking-tight">Junction JID-101</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div class="p-6 bg-white rounded-2xl shadow-lg border-4 border-transparent hover:border-[var(--gov-green)] transition-all duration-300 transform hover:-translate-y-2">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-[var(--gov-green)] bg-green-100 p-3 rounded-full">signpost</span>
+<div>
+<p class="text-sm font-semibold text-[var(--text-secondary)]">Junction Name</p>
+<p class="text-2xl font-bold text-[var(--text-primary)] mt-1">Kodambakkam Junction</p>
+</div>
+</div>
+</div>
+<div class="p-6 bg-white rounded-2xl shadow-lg border-4 border-transparent hover:border-[var(--gov-amber)] transition-all duration-300 transform hover:-translate-y-2">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-[var(--gov-amber)] bg-orange-100 p-3 rounded-full">traffic</span>
+<div>
+<p class="text-sm font-semibold text-[var(--text-secondary)]">Congestion Level</p>
+<p class="text-2xl font-bold text-[var(--gov-amber)] mt-1">High</p>
+</div>
+</div>
+</div>
+<div class="p-6 bg-white rounded-2xl shadow-lg border-4 border-transparent hover:border-[var(--gov-red)] transition-all duration-300 transform hover:-translate-y-2">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-[var(--gov-red)] bg-red-100 p-3 rounded-full">location_on</span>
+<div>
+<p class="text-sm font-semibold text-[var(--text-secondary)]">Latitude</p>
+<p class="text-2xl font-bold text-[var(--text-primary)] mt-1">20.2632° N</p>
+</div>
+</div>
+</div>
+<div class="p-6 bg-white rounded-2xl shadow-lg border-4 border-transparent hover:border-[var(--gov-blue)] transition-all duration-300 transform hover:-translate-y-2">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-blue-500 bg-blue-100 p-3 rounded-full">explore</span>
+<div>
+<p class="text-sm font-semibold text-[var(--text-secondary)]">Longitude</p>
+<p class="text-2xl font-bold text-[var(--text-primary)] mt-1">85.8211° E</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-3xl font-bold text-[var(--text-primary)] mb-6 text-center">IoT Device Dashboard</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-t-8 border-[var(--gov-green)]">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-xl font-bold text-[var(--text-primary)]">IOT ID-1</h4>
+</div>
+<div class="flex items-center justify-center my-6">
+<div class="w-24 h-56 bg-gray-800 rounded-lg p-2 flex flex-col justify-between items-center">
+<div class="w-16 h-16 rounded-full bg-gray-600"></div>
+<div class="w-16 h-16 rounded-full bg-gray-600"></div>
+<div class="w-16 h-16 rounded-full bg-[var(--gov-green)] shadow-[0_0_15px_5px_var(--gov-green)] "></div>
+</div>
+<div class="ml-6 text-center">
+<p class="text-lg font-semibold text-[var(--text-secondary)]">Green Light</p>
+<p class="text-5xl font-extrabold text-[var(--text-primary)]">30s</p>
+</div>
+</div>
+<div class="flex justify-between items-center mt-6 text-lg">
+<span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2"><span class="material-symbols-outlined">directions_car</span> Vehicle Count:</span>
+<span class="font-bold text-[var(--text-primary)]">120</span>
+</div>
+<button class="manual-override-button w-full mt-4 bg-green-500 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-green-600 transition-colors duration-300" onclick="this.parentElement.parentElement.classList.add('manual-mode')">
+<span class="material-symbols-outlined">gamepad</span>
+              Manual Override
+            </button>
+<div class="manual-override-controls mt-4 space-y-4">
+<div class="flex items-center gap-2 flex-wrap">
+<select class="p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--gov-green)] flex-grow">
+<option>10 sec</option>
+<option>25 sec</option>
+<option selected="">30 sec</option>
+<option>45 sec</option>
+</select>
+<button class="w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
+<button class="w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
+<button class="w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"></button>
+</div>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-t-8 border-[var(--gov-red)]">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-xl font-bold text-[var(--text-primary)]">IOT ID-2</h4>
+</div>
+<div class="flex items-center justify-center my-6">
+<div class="w-24 h-56 bg-gray-800 rounded-lg p-2 flex flex-col justify-between items-center">
+<div class="w-16 h-16 rounded-full bg-[var(--gov-red)] shadow-[0_0_15px_5px_var(--gov-red)] "></div>
+<div class="w-16 h-16 rounded-full bg-gray-600"></div>
+<div class="w-16 h-16 rounded-full bg-gray-600"></div>
+</div>
+<div class="ml-6 text-center">
+<p class="text-lg font-semibold text-[var(--text-secondary)]">Red Light</p>
+<p class="text-5xl font-extrabold text-[var(--text-primary)]">45s</p>
+</div>
+</div>
+<div class="flex justify-between items-center mt-6 text-lg">
+<span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2"><span class="material-symbols-outlined">directions_car</span> Vehicle Count:</span>
+<span class="font-bold text-[var(--text-primary)]">225</span>
+</div>
+<button class="manual-override-button w-full mt-4 bg-red-500 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-red-600 transition-colors duration-300" onclick="this.parentElement.parentElement.classList.add('manual-mode')">
+<span class="material-symbols-outlined">gamepad</span>
+              Manual Override
+            </button>
+<div class="manual-override-controls mt-4 space-y-4">
+<div class="flex items-center gap-2 flex-wrap">
+<select class="p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--gov-red)] flex-grow">
+<option>10 seconds</option>
+<option>25 seconds</option>
+<option>30 seconds</option>
+<option selected="">45 seconds</option>
+</select>
+<button class="w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
+<button class="w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
+<button class="w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"></button>
+</div>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-t-8 border-[var(--gov-amber)]">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-xl font-bold text-[var(--text-primary)]">IOT ID-2</h4>
+</div>
+<div class="flex items-center justify-center my-6">
+<div class="w-24 h-56 bg-gray-800 rounded-lg p-2 flex flex-col justify-between items-center">
+<div class="w-16 h-16 rounded-full bg-gray-600"></div>
+<div class="w-16 h-16 rounded-full bg-[var(--gov-amber)] shadow-[0_0_15px_5px_var(--gov-amber)] "></div>
+<div class="w-16 h-16 rounded-full bg-gray-600"></div>
+</div>
+<div class="ml-6 text-center">
+<p class="text-lg font-semibold text-[var(--text-secondary)]">Orange Light</p>
+<p class="text-5xl font-extrabold text-[var(--text-primary)]">10s</p>
+</div>
+</div>
+<div class="flex justify-between items-center mt-6 text-lg">
+<span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2"><span class="material-symbols-outlined">directions_car</span> Vehicle Count:</span>
+<span class="font-bold text-[var(--text-primary)]">0</span>
+</div>
+<button class="manual-override-button w-full mt-4 bg-orange-500 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-orange-600 transition-colors duration-300" onclick="this.parentElement.parentElement.classList.add('manual-mode')">
+<span class="material-symbols-outlined">gamepad</span>
+              Manual Override
+            </button>
+<div class="manual-override-controls mt-4 space-y-4">
+<div class="flex items-center gap-2 flex-wrap">
+<select class="p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--gov-amber)] flex-grow">
+<option selected="">10 sec</option>
+<option>25 sec</option>
+<option>30 sec</option>
+<option>45 sec</option>
+</select>
+<button class="w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
+<button class="w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
+<button class="w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-8 right-8">
+<button class="bg-[var(--primary-color)] text-white px-6 py-4 rounded-full flex items-center gap-3 hover:bg-green-800 shadow-2xl transform hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined">map</span>
+<span class="font-bold text-lg">Back to Map</span>
+</button>
+</div>
+</main>
+</div>
+
+</body></html>

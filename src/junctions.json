@@ -175,7 +175,7 @@
     "name": "Perambur Signal",
     "lat": 13.1212,
     "lng": 80.2378,
-    "congestion": "High",
+    "congestion": "High", 
     "iot": [
       {
         "iot_id": "I12",
