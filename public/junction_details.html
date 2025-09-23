@@ -14,11 +14,16 @@
             --text-primary: #14532d;
             --text-secondary: #4d7c0f;
             --background-color: #f0fdf4;
-            --gov-green: #07d757;
-            --gov-red: #ef4444;
+            --gov-green: #09bd4e;
+            --gov-red: #ec2323;
             --gov-amber: #f97316;
             --dark-green: #14532d;
         }
+        .signal-btn { transition: transform .12s; cursor: pointer; }
+        .signal-btn:hover { transform: scale(.9); }
+        .signal-btn.selected { outline: 3px solid #333; }
+        .controls { display: none; }
+        .controls.show { display: block; }
         .signal-green {
             color: var(--gov-green);
             background-color: rgba(34, 197, 94, 0.1);
@@ -128,7 +133,7 @@
 <div class="left-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
 <span class="material-symbols-outlined text-5xl">arrow_back</span>
 </div>
-<div class="up-arrow w-16 h-16 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center ">
+<div class="up-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center ">
 <span class="material-symbols-outlined text-5xl">arrow_upward</span>
 </div>
 <div class="right-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
@@ -149,8 +154,8 @@
 <div class="flex items-center gap-2 justify-center">
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
-<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
-<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
 <button class="ok-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">OK</button>
 
 <button class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
@@ -173,7 +178,7 @@
 <div class="left-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
 <span class="material-symbols-outlined text-5xl">arrow_back</span>
 </div>
-<div class="up-arrow w-16 h-16 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center ">
+<div class="up-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center ">
 <span class="material-symbols-outlined text-5xl">arrow_upward</span>
 </div>
 <div class="right-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
@@ -194,11 +199,11 @@
 <div class="flex items-center gap-2 justify-center">
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
-<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
-<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
 <button class="ok-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">OK</button>
 
-<button class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
+<button class="exit-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
 </div>
 </div>
 </div>
@@ -218,7 +223,7 @@
 <div class="left-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
 <span class="material-symbols-outlined text-5xl">arrow_back</span>
 </div>
-<div class="up-arrow w-16 h-16 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center ">
+<div class="up-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center ">
 <span class="material-symbols-outlined text-5xl">arrow_upward</span>
 </div>
 <div class="right-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
@@ -239,34 +244,34 @@
 <div class="flex items-center gap-2 justify-center">
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
-<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
-<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
 <button class="ok-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">OK</button>
 
-<button class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
+<button class="exit-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
 </div>
 </div>
 </div>
 </div>
-<div class="group bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-2 border-[var(--dark-green)]" onclick="this.classList.toggle('manual-mode')">
+<div class="group bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-2 border-[var(--dark-green)]" >
 <div class="p-6">
 <div class="flex justify-between items-center mb-4">
-<h4 class="text-xl font-bold text-[var(--text-primary)]">West</h4>
+<h4 class="text-2xl font-bold text-[var(--text-primary)]">West</h4>
 </div>
 <div class="flex justify-center items-center my-6">
 <div class="relative w-[192px] h-[208px]">
 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-36 bg-gray-800 rounded-lg flex flex-col justify-center items-center space-y-2 p-2">
-<div class="w-12 h-12 rounded-full bg-gray-600"></div>
-<div class="w-12 h-12 rounded-full bg-gray-600"></div>
+<div class="circle-red w-12 h-12 rounded-full bg-gray-600"></div>
+<div class="circle-amber w-12 h-12 rounded-full bg-gray-600"></div>
 </div>
 <div class="absolute bottom-0 left-0 w-full h-20 bg-gray-800 rounded-lg flex justify-center items-center space-x-2 p-2">
-<div class="w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
+<div class="left-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
 <span class="material-symbols-outlined text-5xl">arrow_back</span>
 </div>
-<div class="w-16 h-16 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center ">
+<div class="up-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center ">
 <span class="material-symbols-outlined text-5xl">arrow_upward</span>
 </div>
-<div class="w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
+<div class="right-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
 <span class="material-symbols-outlined text-5xl">arrow_forward</span>
 </div>
 </div>
@@ -276,7 +281,7 @@
 <span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2"><span class="material-symbols-outlined">directions_car</span> Vehicle Count:</span>
 <span class="font-bold text-[var(--text-primary)]">120</span>
 </div>
-<button class="manual-override-button w-full mt-4 bg-[var(--dark-green)] text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-green-900 transition-colors duration-300">
+<button class="manual-override-button w-full mt-4 bg-green-900 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-green-900 transition-colors duration-300"onclick="this.parentElement.parentElement.classList.add('manual-mode')">
 <span class="material-symbols-outlined">gamepad</span>
                                         Manual Override
                                     </button>
@@ -284,11 +289,11 @@
 <div class="flex items-center gap-2 justify-center">
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
-<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
-<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
 <button class="ok-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">OK</button>
-</div>
-<button class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
+
+<button class="exit-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
 </div>
 </div>
 </div>
@@ -304,5 +309,59 @@
 </div>
 </main>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".group").forEach(group => {
+    const redCircle = group.querySelector(".circle-red");
+    const amberCircle = group.querySelector(".circle-amber");
+    const leftArrow = group.querySelector(".left-arrow");
+    const upArrow = group.querySelector(".up-arrow");
+    const rightArrow = group.querySelector(".right-arrow");
+
+    function resetAll() {
+      [redCircle, amberCircle, leftArrow, upArrow, rightArrow].forEach(el => {
+        el.classList.remove("bg-[var(--gov-red)]", "shadow-[0_0_15px_5px_var(--gov-red)]");
+        el.classList.remove("bg-[var(--gov-amber)]", "shadow-[0_0_15px_5px_var(--gov-amber)]");
+        el.classList.remove("bg-[var(--gov-green)]", "shadow-[0_0_15px_5px_var(--gov-green)]");
+        el.classList.add("bg-gray-600");
+      });
+    }
+
+    group.querySelectorAll(".signal-btn").forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        resetAll();
+        if (index === 0) {
+          redCircle.classList.replace("bg-gray-600", "bg-[var(--gov-red)]");
+          redCircle.classList.add("shadow-[0_0_15px_5px_var(--gov-red)]");
+        } else if (index === 1) {
+          amberCircle.classList.replace("bg-gray-600", "bg-[var(--gov-amber)]");
+          amberCircle.classList.add("shadow-[0_0_15px_5px_var(--gov-amber)]");
+        } else if (index === 2) {
+          leftArrow.classList.replace("bg-gray-600", "bg-[var(--gov-green)]");
+          leftArrow.classList.add("shadow-[0_0_15px_5px_var(--gov-green)]");
+        } else if (index === 3) {
+          upArrow.classList.replace("bg-gray-600", "bg-[var(--gov-green)]");
+          rightArrow.classList.replace("bg-gray-600", "bg-[var(--gov-green)]");
+          upArrow.classList.add("shadow-[0_0_15px_5px_var(--gov-green)]");
+          rightArrow.classList.add("shadow-[0_0_15px_5px_var(--gov-green)]");
+        }
+      });
+    });
+
+    // ✅ Fix Exit
+    const exitBtn = group.querySelector(".exit-btn");
+    if (exitBtn) {
+      exitBtn.addEventListener("click", () => {
+        resetAll();
+        group.classList.remove("manual-mode");
+      });
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>
 
 </body></html>
