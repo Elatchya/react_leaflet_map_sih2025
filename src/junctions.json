@@ -7,10 +7,24 @@
     "congestion": "High",
     "iot": [
       {
-        "iot_id": "I1",
+        "iot_id": "north",
         "current_signal": "Red",
-        "vehicle_count": 32,
-        "current_signal_timer": "30"
+        "vehicle_count": 12
+      },
+      {
+        "iot_id": "south",
+        "current_signal": "Yellow",
+        "vehicle_count": 32
+      },
+      {
+        "iot_id": "east",
+        "current_signal": "Red",
+        "vehicle_count": 32
+      },
+      {
+        "iot_id": "west",
+        "current_signal": "Red",
+        "vehicle_count": 64
       }
     ]
   },
@@ -23,7 +37,7 @@
     "iot": [
       {
         "iot_id": "I2",
-        "current_signal": "Red",
+        "current_signal": "Yellow",
         "vehicle_count": 43,
         "current_signal_timer": "25"
       }
@@ -49,11 +63,11 @@
     "name": "T Nagar Signal",
     "lat": 13.0418,
     "lng": 80.2334,
-    "congestion": "High",
+    "congestion": "Medium",
     "iot": [
       {
         "iot_id": "I4",
-        "current_signal": "Red",
+        "current_signal": "Green",
         "vehicle_count": 78,
         "current_signal_timer": "35"
       }
@@ -83,7 +97,7 @@
     "iot": [
       {
         "iot_id": "I6",
-        "current_signal": "Green",
+        "current_signal": "Yellow",
         "vehicle_count": 38,
         "current_signal_timer": "25"
       }
@@ -94,12 +108,12 @@
     "name": "Anna Nagar Signal",
     "lat": 13.0878,
     "lng": 80.2132,
-    "congestion": "High",
+    "congestion": "Low",
     "iot": [
       {
         "iot_id": "I7",
-        "current_signal": "Red",
-        "vehicle_count": 92,
+        "current_signal": "Green",
+        "vehicle_count": 12,
         "current_signal_timer": "45"
       }
     ]
@@ -124,11 +138,11 @@
     "name": "Egmore Signal",
     "lat": 13.0724,
     "lng": 80.2601,
-    "congestion": "High",
+    "congestion": "Medium",
     "iot": [
       {
         "iot_id": "I9",
-        "current_signal": "Yellow",
+        "current_signal": "Green",
         "vehicle_count": 84,
         "current_signal_timer": "15"
       }
@@ -149,7 +163,7 @@
       },
       {
         "iot_id": "I2",
-        "current_signal": "Red",
+        "current_signal": "Yellow",
         "vehicle_count": 24,
         "current_signal_timer": "30"
       }
@@ -164,7 +178,7 @@
     "iot": [
       {
         "iot_id": "I11",
-        "current_signal": "Red",
+        "current_signal": "Yellow",
         "vehicle_count": 58,
         "current_signal_timer": "40"
       }
@@ -175,11 +189,11 @@
     "name": "Perambur Signal",
     "lat": 13.1212,
     "lng": 80.2378,
-    "congestion": "High", 
+    "congestion": "Low", 
     "iot": [
       {
         "iot_id": "I12",
-        "current_signal": "Red",
+        "current_signal": "Green",
         "vehicle_count": 58,
         "current_signal_timer": "35"
       }

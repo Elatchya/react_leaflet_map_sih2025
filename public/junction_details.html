@@ -2,75 +2,83 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta charset="utf-8"/>
-<title>Traffic Management System</title>
+<title>CitySync Dashboard</title>
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Poppins:wght@400;500;600;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style type="text/tailwindcss">
-    :root {
-      --primary-color: #166534;
-      --secondary-color: #f0fdf4;
-      --text-primary: #14532d;
-      --text-secondary: #4d7c0f;
-      --background-color: #f0fdf4;
-      --gov-green: #11cd56;
-      --gov-red: #f62424;
-      --gov-amber: #f97316;
-    }
-    .signal-green {
-      color: var(--gov-green);
-      background-color: rgba(34, 197, 94, 0.1);
-    }
-    .signal-red {
-      color: var(--gov-red);
-      background-color: rgba(239, 68, 68, 0.1);
-    }
-    .signal-orange {
-      color: var(--gov-amber);
-      background-color: rgba(249, 115, 22, 0.1);
-    }
-    .group .manual-override-controls {
-        display: none;
-    }
-    .group.manual-mode .manual-override-controls {
-      display: flex;
-    }
-    .group.manual-mode .manual-override-button {
-      display: none;
-    }
-    @keyframes bounce-sm {
-      0%, 100% { transform: translateY(-5%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
-      50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
-    }
-    .animate-bounce-sm {
-      animation: bounce-sm 1s infinite;
-    }
-  </style>
+        :root {
+            --primary-color: #166534;
+            --secondary-color: #f0fdf4;
+            --text-primary: #14532d;
+            --text-secondary: #4d7c0f;
+            --background-color: #f0fdf4;
+            --gov-green: #07d757;
+            --gov-red: #ef4444;
+            --gov-amber: #f97316;
+            --dark-green: #14532d;
+        }
+        .signal-green {
+            color: var(--gov-green);
+            background-color: rgba(34, 197, 94, 0.1);
+        }
+        .signal-red {
+            color: var(--gov-red);
+            background-color: rgba(239, 68, 68, 0.1);
+        }
+        .signal-orange {
+            color: var(--gov-amber);
+            background-color: rgba(249, 115, 22, 0.1);
+        }
+        .group .manual-override-controls {
+            display: none;
+        }
+        .group.manual-mode .manual-override-controls {
+            display: flex;
+        }
+        .group.manual-mode .manual-override-button {
+            display: none;
+        }
+        @keyframes bounce-sm {
+            0%,
+            100% {
+                transform: translateY(-5%);
+                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+            50% {
+                transform: translateY(0);
+                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+        .animate-bounce-sm {
+            animation: bounce-sm 1s infinite;
+        }
+    </style>
 </head>
 <body class="bg-[var(--background-color)]" style='font-family: "Poppins", sans-serif;'>
 <div class="flex min-h-screen">
 <main class="flex-1">
 <header class="flex items-center justify-between h-20 px-8 bg-white shadow-md">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-4xl text-[var(--gov-green)]">traffic</span>
-<h1 class="text-3xl font-black tracking-tighter text-[var(--text-primary)]">Government of Odisha</h1>
+  <h1 class="text-3xl font-black tracking-tighter text-[var(--text-primary)] ">Junction Dashboard</h1>
+  <span class="material-symbols-outlined text-4xl text-[var(--gov-green)]">traffic</span>
 </div>
 <div class="flex items-center gap-6">
 
 </header>
-<div class="p-8">
+<div class="p-5">
 <div class="max-w-full mx-auto">
 <div class="mb-10 text-center">
 <h2 class="text-3xl font-bold text-[var(--text-primary)] tracking-tight">Junction JID-101</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-<div class="p-6 bg-white rounded-2xl shadow-lg border-4 border-transparent hover:border-[var(--gov-green)] transition-all duration-300 transform hover:-translate-y-2">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-4xl text-[var(--gov-green)] bg-green-100 p-3 rounded-full">signpost</span>
+<div class="p-4 bg-white rounded-2xl shadow-lg border-4 border-transparent hover:border-[var(--gov-green)] transition-all duration-300 transform hover:-translate-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-[var(--gov-green)] bg-green-100 p-1 rounded-full">signpost</span>
 <div>
 <p class="text-sm font-semibold text-[var(--text-secondary)]">Junction Name</p>
-<p class="text-2xl font-bold text-[var(--text-primary)] mt-1">Kodambakkam Junction</p>
+<p class="text-2xl font-bold text-[var(--text-primary)] mt-1">Kodambakkam Signal</p>
 </div>
 </div>
 </div>
@@ -104,121 +112,183 @@
 </div>
 <div>
 <h3 class="text-3xl font-bold text-[var(--text-primary)] mb-6 text-center">IoT Device Dashboard</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="group bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-t-8 border-[var(--gov-green)]">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<div class="group bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-2 border-[var(--dark-green)]" >
 <div class="p-6">
 <div class="flex justify-between items-center mb-4">
-<h4 class="text-xl font-bold text-[var(--text-primary)]">IOT ID-1</h4>
+<h4 class="text-2xl font-bold text-[var(--text-primary)]">North</h4>
 </div>
-<div class="flex items-center justify-center my-6">
-<div class="w-24 h-56 bg-gray-800 rounded-lg p-2 flex flex-col justify-between items-center">
-<div class="w-16 h-16 rounded-full bg-gray-600"></div>
-<div class="w-16 h-16 rounded-full bg-gray-600"></div>
-<div class="w-16 h-16 rounded-full bg-[var(--gov-green)] shadow-[0_0_15px_5px_var(--gov-green)] "></div>
+<div class="flex justify-center items-center my-6">
+<div class="relative w-[192px] h-[208px]">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-36 bg-gray-800 rounded-lg flex flex-col justify-center items-center space-y-2 p-2">
+<div class="circle-red w-12 h-12 rounded-full bg-gray-600"></div>
+<div class="circle-amber w-12 h-12 rounded-full bg-gray-600"></div>
 </div>
-<div class="ml-6 text-center">
-<p class="text-lg font-semibold text-[var(--text-secondary)]">Green Light</p>
-<p class="text-5xl font-extrabold text-[var(--text-primary)]">30s</p>
+<div class="absolute bottom-0 left-0 w-full h-20 bg-gray-800 rounded-lg flex justify-center items-center space-x-2 p-2">
+<div class="left-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
+<span class="material-symbols-outlined text-5xl">arrow_back</span>
+</div>
+<div class="up-arrow w-16 h-16 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center ">
+<span class="material-symbols-outlined text-5xl">arrow_upward</span>
+</div>
+<div class="right-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
+<span class="material-symbols-outlined text-5xl">arrow_forward</span>
+</div>
+</div>
 </div>
 </div>
 <div class="flex justify-between items-center mt-6 text-lg">
 <span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2"><span class="material-symbols-outlined">directions_car</span> Vehicle Count:</span>
 <span class="font-bold text-[var(--text-primary)]">120</span>
 </div>
-<button class="manual-override-button w-full mt-4 bg-green-500 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-green-600 transition-colors duration-300" onclick="this.parentElement.parentElement.classList.add('manual-mode')">
+<button class="manual-override-button w-full mt-4 bg-green-900 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-green-900 transition-colors duration-300"onclick="this.parentElement.parentElement.classList.add('manual-mode')">
 <span class="material-symbols-outlined">gamepad</span>
-              Manual Override
-            </button>
+                                        Manual Override
+                                    </button>
 <div class="manual-override-controls mt-4 space-y-4">
-<div class="flex items-center gap-2 flex-wrap">
-<select class="p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--gov-green)] flex-grow">
-<option>10 sec</option>
-<option>25 sec</option>
-<option selected="">30 sec</option>
-<option>45 sec</option>
-</select>
-<button class="w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
-<button class="w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
-<button class="w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"></button>
+<div class="flex items-center gap-2 justify-center">
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
+<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
+<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
+<button class="ok-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">OK</button>
+
+<button class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
 </div>
 </div>
 </div>
 </div>
-<div class="group bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-t-8 border-[var(--gov-red)]">
+<div class="group bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-2 border-[var(--dark-green)]" >
 <div class="p-6">
 <div class="flex justify-between items-center mb-4">
-<h4 class="text-xl font-bold text-[var(--text-primary)]">IOT ID-2</h4>
+<h4 class="text-2xl font-bold text-[var(--text-primary)]">East</h4>
 </div>
-<div class="flex items-center justify-center my-6">
-<div class="w-24 h-56 bg-gray-800 rounded-lg p-2 flex flex-col justify-between items-center">
-<div class="w-16 h-16 rounded-full bg-[var(--gov-red)] shadow-[0_0_15px_5px_var(--gov-red)] "></div>
-<div class="w-16 h-16 rounded-full bg-gray-600"></div>
-<div class="w-16 h-16 rounded-full bg-gray-600"></div>
+<div class="flex justify-center items-center my-6">
+<div class="relative w-[192px] h-[208px]">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-36 bg-gray-800 rounded-lg flex flex-col justify-center items-center space-y-2 p-2">
+<div class="circle-red w-12 h-12 rounded-full bg-gray-600"></div>
+<div class="circle-amber w-12 h-12 rounded-full bg-gray-600"></div>
 </div>
-<div class="ml-6 text-center">
-<p class="text-lg font-semibold text-[var(--text-secondary)]">Red Light</p>
-<p class="text-5xl font-extrabold text-[var(--text-primary)]">45s</p>
+<div class="absolute bottom-0 left-0 w-full h-20 bg-gray-800 rounded-lg flex justify-center items-center space-x-2 p-2">
+<div class="left-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
+<span class="material-symbols-outlined text-5xl">arrow_back</span>
+</div>
+<div class="up-arrow w-16 h-16 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center ">
+<span class="material-symbols-outlined text-5xl">arrow_upward</span>
+</div>
+<div class="right-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
+<span class="material-symbols-outlined text-5xl">arrow_forward</span>
+</div>
+</div>
 </div>
 </div>
 <div class="flex justify-between items-center mt-6 text-lg">
 <span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2"><span class="material-symbols-outlined">directions_car</span> Vehicle Count:</span>
-<span class="font-bold text-[var(--text-primary)]">225</span>
+<span class="font-bold text-[var(--text-primary)]">120</span>
 </div>
-<button class="manual-override-button w-full mt-4 bg-red-500 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-red-600 transition-colors duration-300" onclick="this.parentElement.parentElement.classList.add('manual-mode')">
+<button class="manual-override-button w-full mt-4 bg-green-900 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-green-900 transition-colors duration-300"onclick="this.parentElement.parentElement.classList.add('manual-mode')">
 <span class="material-symbols-outlined">gamepad</span>
-              Manual Override
-            </button>
+                                        Manual Override
+                                    </button>
 <div class="manual-override-controls mt-4 space-y-4">
-<div class="flex items-center gap-2 flex-wrap">
-<select class="p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--gov-red)] flex-grow">
-<option>10 seconds</option>
-<option>25 seconds</option>
-<option>30 seconds</option>
-<option selected="">45 seconds</option>
-</select>
-<button class="w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
-<button class="w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
-<button class="w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"></button>
+<div class="flex items-center gap-2 justify-center">
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
+<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
+<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
+<button class="ok-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">OK</button>
+
+<button class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
 </div>
 </div>
 </div>
 </div>
-<div class="group bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-t-8 border-[var(--gov-amber)]">
+<div class="group bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-2 border-[var(--dark-green)]" >
 <div class="p-6">
 <div class="flex justify-between items-center mb-4">
-<h4 class="text-xl font-bold text-[var(--text-primary)]">IOT ID-2</h4>
+<h4 class="text-2xl font-bold text-[var(--text-primary)]">South</h4>
 </div>
-<div class="flex items-center justify-center my-6">
-<div class="w-24 h-56 bg-gray-800 rounded-lg p-2 flex flex-col justify-between items-center">
-<div class="w-16 h-16 rounded-full bg-gray-600"></div>
-<div class="w-16 h-16 rounded-full bg-[var(--gov-amber)] shadow-[0_0_15px_5px_var(--gov-amber)] "></div>
-<div class="w-16 h-16 rounded-full bg-gray-600"></div>
+<div class="flex justify-center items-center my-6">
+<div class="relative w-[192px] h-[208px]">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-36 bg-gray-800 rounded-lg flex flex-col justify-center items-center space-y-2 p-2">
+<div class="circle-red w-12 h-12 rounded-full bg-gray-600"></div>
+<div class="circle-amber w-12 h-12 rounded-full bg-gray-600"></div>
 </div>
-<div class="ml-6 text-center">
-<p class="text-lg font-semibold text-[var(--text-secondary)]">Orange Light</p>
-<p class="text-5xl font-extrabold text-[var(--text-primary)]">10s</p>
+<div class="absolute bottom-0 left-0 w-full h-20 bg-gray-800 rounded-lg flex justify-center items-center space-x-2 p-2">
+<div class="left-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
+<span class="material-symbols-outlined text-5xl">arrow_back</span>
+</div>
+<div class="up-arrow w-16 h-16 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center ">
+<span class="material-symbols-outlined text-5xl">arrow_upward</span>
+</div>
+<div class="right-arrow w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
+<span class="material-symbols-outlined text-5xl">arrow_forward</span>
+</div>
+</div>
 </div>
 </div>
 <div class="flex justify-between items-center mt-6 text-lg">
 <span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2"><span class="material-symbols-outlined">directions_car</span> Vehicle Count:</span>
-<span class="font-bold text-[var(--text-primary)]">0</span>
+<span class="font-bold text-[var(--text-primary)]">120</span>
 </div>
-<button class="manual-override-button w-full mt-4 bg-orange-500 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-orange-600 transition-colors duration-300" onclick="this.parentElement.parentElement.classList.add('manual-mode')">
+<button class="manual-override-button w-full mt-4 bg-green-900 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-green-900 transition-colors duration-300"onclick="this.parentElement.parentElement.classList.add('manual-mode')">
 <span class="material-symbols-outlined">gamepad</span>
-              Manual Override
-            </button>
+                                        Manual Override
+                                    </button>
 <div class="manual-override-controls mt-4 space-y-4">
-<div class="flex items-center gap-2 flex-wrap">
-<select class="p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--gov-amber)] flex-grow">
-<option selected="">10 sec</option>
-<option>25 sec</option>
-<option>30 sec</option>
-<option>45 sec</option>
-</select>
-<button class="w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
-<button class="w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
-<button class="w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"></button>
+<div class="flex items-center gap-2 justify-center">
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
+<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
+<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
+<button class="ok-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">OK</button>
+
+<button class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
 </div>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 border-2 border-[var(--dark-green)]" onclick="this.classList.toggle('manual-mode')">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-xl font-bold text-[var(--text-primary)]">West</h4>
+</div>
+<div class="flex justify-center items-center my-6">
+<div class="relative w-[192px] h-[208px]">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-36 bg-gray-800 rounded-lg flex flex-col justify-center items-center space-y-2 p-2">
+<div class="w-12 h-12 rounded-full bg-gray-600"></div>
+<div class="w-12 h-12 rounded-full bg-gray-600"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-20 bg-gray-800 rounded-lg flex justify-center items-center space-x-2 p-2">
+<div class="w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
+<span class="material-symbols-outlined text-5xl">arrow_back</span>
+</div>
+<div class="w-16 h-16 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center ">
+<span class="material-symbols-outlined text-5xl">arrow_upward</span>
+</div>
+<div class="w-16 h-16 rounded-full bg-gray-600 text-white flex items-center justify-center text-4xl">
+<span class="material-symbols-outlined text-5xl">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center mt-6 text-lg">
+<span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2"><span class="material-symbols-outlined">directions_car</span> Vehicle Count:</span>
+<span class="font-bold text-[var(--text-primary)]">120</span>
+</div>
+<button class="manual-override-button w-full mt-4 bg-[var(--dark-green)] text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-green-900 transition-colors duration-300">
+<span class="material-symbols-outlined">gamepad</span>
+                                        Manual Override
+                                    </button>
+<div class="manual-override-controls mt-4 space-y-4">
+<div class="flex items-center gap-2 justify-center">
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-red)] text-white flex items-center justify-center"></button>
+<button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
+<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
+<button class="w-12 h-12 rounded-full bg-[var(--dark-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
+<button class="ok-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">OK</button>
+</div>
+<button class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
 </div>
 </div>
 </div>
@@ -227,7 +297,7 @@
 </div>
 </div>
 <div class="fixed bottom-8 right-8">
-<button class="bg-[var(--primary-color)] text-white px-6 py-4 rounded-full flex items-center gap-3 hover:bg-green-800 shadow-2xl transform hover:scale-110 transition-transform duration-300">
+<button onclick="window.location.href='/'" class="bg-[var(--primary-color)] text-white px-6 py-4 rounded-full flex items-center gap-3 hover:bg-green-800 shadow-2xl transform hover:scale-110 transition-transform duration-300">
 <span class="material-symbols-outlined">map</span>
 <span class="font-bold text-lg">Back to Map</span>
 </button>

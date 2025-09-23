@@ -25,12 +25,7 @@ function Header() {
       fontWeight: "bold",
       boxShadow: "0 2px 5px rgba(0,0,0,0.2)"
     }}>
-      <img 
-        src={require("./icons/odisha1.png")}
-        alt="Odisha Logo"
-        style={{ height: "40px", marginRight: "15px" }}
-      />
-      Government of Odisha
+  Government of Odisha
     </div>
   );
 }
@@ -48,24 +43,37 @@ const getIconByCongestion = (level) => {
 };
 
 // ✅ Custom alert popup component
-function AlertBox({ message, onClose, index }) {
+function AlertBox({ message, onClose, id, index }) {
+  const handleClick = () => {
+    window.location.href = `/junction_details.html?id=${id}`;
+  };
+
   return (
-    <div style={{
-      position: "fixed",
-      bottom: `${20 + index * 70}px`, // stack alerts with gap
-      right: "20px",
-      backgroundColor: "#ff4d4d",
-      color: "white",
-      padding: "15px 20px",
-      borderRadius: "8px",
-      boxShadow: "0 2px 10px rgba(0,0,0,0.3)",
-      fontWeight: "bold",
-      zIndex: 1000,
-      minWidth: "250px"
-    }}>
-      {message}
+    <div 
+      onClick={handleClick}
+      style={{
+        position: "fixed",
+        bottom: `${20 + index * 70}px`, // stack alerts with gap
+        right: "20px",
+        backgroundColor: "#ff4d4d",
+        color: "white",
+        padding: "15px 20px",
+        borderRadius: "8px",
+        boxShadow: "0 2px 10px rgba(0,0,0,0.3)",
+        fontWeight: "bold",
+        zIndex: 1000,
+        minWidth: "250px",
+        cursor: "pointer"  // ✅ show clickable hand cursor
+      }}
+    >
+      <span>
+        ⚠ High Congestion detected at <u>{message}</u>
+      </span>
       <button 
-        onClick={onClose} 
+        onClick={(e) => {
+          e.stopPropagation(); // prevent navigation when closing
+          onClose();
+        }} 
         style={{
           marginLeft: "15px",
           background: "transparent",
@@ -82,18 +90,19 @@ function AlertBox({ message, onClose, index }) {
   );
 }
 
+
 function MapPage() {
   const navigate = useNavigate();
   const [alerts, setAlerts] = useState([]);
 
   useEffect(() => {
-    // ✅ Find all high congestion junctions
-    const highCongestions = junctions.filter(j => j.congestion === "High");
-    setAlerts(highCongestions.map(j => ({
-      id: j.id,
-      message: `⚠ High Congestion detected at ${j.name}`
-    })));
-  }, []);
+  const highCongestions = junctions.filter(j => j.congestion === "High");
+  setAlerts(highCongestions.map(j => ({
+    id: j.id,
+    name: j.name
+  })));
+}, []);
+
 
   const closeAlert = (id) => {
     setAlerts(prev => prev.filter(a => a.id !== id));
@@ -124,7 +133,6 @@ function MapPage() {
               <b>{junction.name}</b> <br />
               <b>Junction ID:</b> {junction.id} <br />
               <b>Congestion:</b> {junction.congestion} <br />
-              <b>Vehicles count:</b> {junction.vehicle_count}
             </Tooltip>
           </Marker>
         ))}
@@ -134,11 +142,13 @@ function MapPage() {
       {alerts.map((alert, index) => (
         <AlertBox 
           key={alert.id} 
-          message={alert.message} 
+          id={alert.id}
+          message={alert.name} 
           index={index}
           onClose={() => closeAlert(alert.id)} 
         />
       ))}
+
     </>
   );
 }
