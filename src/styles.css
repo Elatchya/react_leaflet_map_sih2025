@@ -39,3 +39,23 @@
 h1 {
     color: rgb(26, 94, 6);
 }
+/* Add these CSS variables and classes to the top of your existing src/styles.css file.
+These are taken directly from your junction_details.html to ensure the styles match.
+*/
+:root {
+  --primary-color: #166534;
+  --secondary-color: #f0fdf4;
+  --text-primary: #14532d;
+  --text-secondary: #4d7c0f;
+  --background-color: #f0fdf4;
+  --gov-green: #09bd4e;
+  --gov-red: #ec2323;
+  --gov-amber: #f97316;
+  --dark-green: #14532d;
+  }
+  
+  /* Base styling for leaflet container if not already present */
+  .leaflet-container {
+  width: 100%;
+  height: 90vh;
+  }
