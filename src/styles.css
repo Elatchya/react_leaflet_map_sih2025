@@ -1,10 +1,10 @@
-* {
+.map-page * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-#root {
+.map-page {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -16,14 +16,14 @@
   background-color: #fcffee;
 }
 
-/* height of the container */
-.leaflet-container {
+/* Leaflet map styling scoped only to MapPage */
+.map-page .leaflet-container {
   height: 90vh;
   width: 90%;
   border-radius: 2rem;
 }
 
-.cluster-icon {
+.map-page .cluster-icon {
   background-color: #333;
   height: 2em;
   width: 2em;
@@ -36,12 +36,11 @@
   box-shadow: 0 0 0px 5px #fff;
 }
 
-h1 {
-    color: rgb(26, 94, 6);
+.map-page h1 {
+  color: rgb(26, 94, 6);
 }
-/* Add these CSS variables and classes to the top of your existing src/styles.css file.
-These are taken directly from your junction_details.html to ensure the styles match.
-*/
+
+/* Keep your CSS variables global (safe for Tailwind + JunctionDetails) */
 :root {
   --primary-color: #166534;
   --secondary-color: #f0fdf4;
@@ -52,10 +51,4 @@ These are taken directly from your junction_details.html to ensure the styles ma
   --gov-red: #ec2323;
   --gov-amber: #f97316;
   --dark-green: #14532d;
-  }
-  
-  /* Base styling for leaflet container if not already present */
-  .leaflet-container {
-  width: 100%;
-  height: 90vh;
-  }
+}

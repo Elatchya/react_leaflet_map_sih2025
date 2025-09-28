@@ -1,0 +1,31 @@
+/* index.css or tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-color: #166534;
+    --secondary-color: #f0fdf4;
+    --text-primary: #14532d;
+    --text-secondary: #4d7c0f;
+    --background-color: #f0fdf4;
+    --gov-green: #09bd4e;
+    --gov-red: #ec2323;
+    --gov-amber: #f97316;
+    --dark-green: #14532d;
+}
+
+/* Reuse your custom classes from HTML */
+.signal-btn { transition: transform .12s; cursor: pointer; }
+.signal-btn:hover { transform: scale(.9); }
+.signal-btn.selected { outline: 3px solid #333; }
+.manual-override-controls { display: none; }
+.group.manual-mode .manual-override-controls { display: flex; }
+.group.manual-mode .manual-override-button { display: none; }
+.animate-bounce-sm { 
+  animation: bounce-sm 1s infinite;
+}
+@keyframes bounce-sm {
+    0%,100% { transform: translateY(-5%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1);}
+    50% { transform: translateY(0); animation-timing-function: cubic-bezier(0,0,0.2,1);}
+}
