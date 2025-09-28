@@ -92,9 +92,11 @@
 <div class="flex items-center gap-4">
 <span class="material-symbols-outlined text-4xl text-[var(--gov-amber)] bg-orange-100 p-3 rounded-full">traffic</span>
 <div>
-<p class="text-sm font-semibold text-[var(--text-secondary)]">Congestion Level</p>
-<p class="text-2xl font-bold text-[var(--gov-amber)] mt-1">High</p>
+  <p class="text-sm font-semibold text-[var(--text-secondary)]">Congestion Level</p>
+  <p class="text-2xl font-bold text-[var(--gov-amber)] mt-1 congestion-level">High</p>
 </div>
+
+
 </div>
 </div>
 <div class="p-6 bg-white rounded-2xl shadow-lg border-4 border-transparent hover:border-[var(--gov-red)] transition-all duration-300 transform hover:-translate-y-2">
@@ -143,9 +145,13 @@
 </div>
 </div>
 </div>
+<div id="main-vehicle-counts">
 <div class="flex justify-between items-center mt-6 text-lg">
-<span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2"><span class="material-symbols-outlined">directions_car</span> Vehicle Count:</span>
-<span class="font-bold text-[var(--text-primary)]">16</span>
+  <span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2">
+    <span class="material-symbols-outlined">directions_car</span> Vehicle Count:
+  </span>
+  <span class="font-bold text-[var(--text-primary)] vehicle-count">15</span>
+</div>
 </div>
 <button class="manual-override-button w-full mt-4 bg-green-900 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-green-900 transition-colors duration-300"onclick="this.parentElement.parentElement.classList.add('manual-mode')">
 <span class="material-symbols-outlined">gamepad</span>
@@ -157,9 +163,7 @@
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
-<button class="ok-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">OK</button>
 
-<button class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
 </div>
 </div>
 </div>
@@ -188,9 +192,13 @@
 </div>
 </div>
 </div>
+<div id="main-vehicle-counts">
 <div class="flex justify-between items-center mt-6 text-lg">
-<span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2"><span class="material-symbols-outlined">directions_car</span> Vehicle Count:</span>
-<span class="font-bold text-[var(--text-primary)]">8</span>
+  <span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2">
+    <span class="material-symbols-outlined">directions_car</span> Vehicle Count:
+  </span>
+  <span class="font-bold text-[var(--text-primary)] vehicle-count">18</span>
+</div>
 </div>
 <button class="manual-override-button w-full mt-4 bg-green-900 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-green-900 transition-colors duration-300"onclick="this.parentElement.parentElement.classList.add('manual-mode')">
 <span class="material-symbols-outlined">gamepad</span>
@@ -204,9 +212,6 @@
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
 </div>
 
-<button class="ok-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">OK</button>
-
-<button class="exit-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
 
 </div>
 </div>
@@ -235,9 +240,13 @@
 </div>
 </div>
 </div>
+<div id="main-vehicle-counts">
 <div class="flex justify-between items-center mt-6 text-lg">
-<span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2"><span class="material-symbols-outlined">directions_car</span> Vehicle Count:</span>
-<span class="font-bold text-[var(--text-primary)]">21</span>
+  <span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2">
+    <span class="material-symbols-outlined">directions_car</span> Vehicle Count:
+  </span>
+  <span class="font-bold text-[var(--text-primary)] vehicle-count">8</span>
+</div>
 </div>
 <button class="manual-override-button w-full mt-4 bg-green-900 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-green-900 transition-colors duration-300"onclick="this.parentElement.parentElement.classList.add('manual-mode')">
 <span class="material-symbols-outlined">gamepad</span>
@@ -249,9 +258,7 @@
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-amber)] text-white flex items-center justify-center"></button>
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">arrow_back</span></button>
 <button class="signal-btn w-12 h-12 rounded-full bg-[var(--gov-green)] text-white flex items-center justify-center"><span class="material-symbols-outlined">straight</span><span class="material-symbols-outlined -ml-4">arrow_forward</span></button>
-<button class="ok-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">OK</button>
 
-<button class="exit-btn px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">Exit</button>
 </div>
 </div>
 </div>
@@ -280,10 +287,15 @@
 </div>
 </div>
 </div>
+<div id="main-vehicle-counts">
 <div class="flex justify-between items-center mt-6 text-lg">
-<span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2"><span class="material-symbols-outlined">directions_car</span> Vehicle Count:</span>
-<span class="font-bold text-[var(--text-primary)]">12</span>
+  <span class="font-semibold text-[var(--text-secondary)] flex items-center gap-2">
+    <span class="material-symbols-outlined">directions_car</span> Vehicle Count:
+  </span>
+  <span class="font-bold text-[var(--text-primary)] vehicle-count">12</span>
 </div>
+</div>
+
 <button class="manual-override-button w-full mt-4 bg-green-900 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-green-900 transition-colors duration-300"onclick="this.parentElement.parentElement.classList.add('manual-mode')">
 <span class="material-symbols-outlined">gamepad</span>
                                         Manual Override
@@ -499,6 +511,29 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle = !toggle;
   }, 8000);
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const vehicleCountSpans = document.querySelectorAll("#main-vehicle-counts .vehicle-count");
+
+
+  function updateVehicleCounts() {
+    vehicleCountSpans.forEach(span => {
+      const randomCount = Math.floor(Math.random() * 21) + 10; // Random 10-30
+      span.textContent = randomCount;
+    });
+  }
+
+  updateVehicleCounts(); // Initial update on load
+  setInterval(updateVehicleCounts, 3000); // Update every 3 seconds
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const congestionEl = document.querySelector(".congestion-level");
+  if (!congestionEl) return;
+
+  setTimeout(() => {
+    congestionEl.textContent = "Medium";
+  }, 5000);
+});
+
 
 </script>
 
